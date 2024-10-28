@@ -1,0 +1,90 @@
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                         Voxel Engine Checklist                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1. Set Up Data Structures
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ✅ Define Voxel Structure:
+        - Create a `struct` to represent a voxel, with properties
+          like color and solidity.
+
+    ✅ Create World Grid:
+        - Set up a 3D array or list structure to store voxels, 
+          where each cell can hold a voxel or be empty.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    2. Initialize SDL Window
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ✅ Set Up SDL Window and Surface:
+        - Initialize SDL, create a window, and define a rendering 
+          surface.
+
+    ✅ Define Screen Dimensions:
+        - Set constants for window size and grid dimensions.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    3. Render Basic Voxel Grid
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ❏ Set Up Projection Logic:
+        - Implement simple projection to convert 3D voxel coordinates
+          into 2D screen coordinates.
+
+    ❏ Loop Through Grid:
+        - Write a function to loop through each voxel in the world grid.
+
+    ❏ Draw Each Voxel:
+        - Render a 2D square if the voxel is not empty.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    4. Implement Camera System
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ❏ Set Camera Position and Direction:
+        - Define variables for the camera’s position and direction.
+
+    ❏ Add Keyboard Controls for Movement:
+        - Bind keys to move the camera forward, backward, and 
+          side-to-side.
+
+    ❏ Implement Zoom or Scaling:
+        - Allow zooming in/out to view more or fewer voxels.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    5. Add Voxel Manipulation Controls
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ❏ Place Voxel:
+        - Bind a key to place a voxel at the camera’s target location.
+
+    ❏ Remove Voxel:
+        - Bind a key to remove a voxel at the camera’s target location.
+
+    ❏ Update Rendering on Change:
+        - After placing/removing a voxel, redraw the grid.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    6. Improve Rendering Performance
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ❏ Add Visibility Check (Culling):
+        - Only draw faces of voxels visible to the camera, skipping
+          faces covered by other voxels.
+
+    ❏ Optimize Loops:
+        - Ensure only relevant voxels are processed for rendering.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    7. Optional: Add Basic Lighting
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    ❏ Define Basic Light Source:
+        - Add a light source variable to simulate lighting effects.
+
+    ❏ Adjust Colors Based on Light:
+        - Apply shading to voxel faces based on their orientation 
+          to the light source.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "window.h": "c",
+        "voxel.h": "c",
+        "renderer.h": "c"
+    }
+}
