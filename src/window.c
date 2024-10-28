@@ -50,6 +50,11 @@ void start_window() {
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         /*draw_cube(renderer);*/
         draw_rotating_cube(renderer, degree);
+        drawButton(10, 10, 100, 100, renderer);
+        // Change Color to black
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        drawText(30, 20, "Hello", renderer);
+
         degree = (degree + 1) % 360;
         SDL_RenderPresent(renderer);
         SDL_Delay(16);

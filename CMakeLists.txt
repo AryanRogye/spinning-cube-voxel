@@ -13,9 +13,10 @@ find_package(SDL2 REQUIRED)
 # Add include directories
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(include)
+include_directories(nuklear)
 
 # Add your executable
-add_executable(build src/main.c src/voxel.c src/renderer.c src/window.c)
+add_executable(build src/main.c src/voxel.c src/renderer.c src/window.c src/gui.c src/text.c)
 
 # Link SDL2 to your executable
 target_link_libraries(build ${SDL2_LIBRARIES})

@@ -7,6 +7,7 @@
 #include <SDL2/SDL.h>
 #include "renderer.h"
 #include <stdbool.h>
+#include "gui.h"
 
 void start_window();
 void handleEvent(SDL_Event e, bool *keep_window_open);
