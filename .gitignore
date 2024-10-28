@@ -1,2 +1,5 @@
 /target
 build/
+.cache/
+.vscode
+.DS_Store
